@@ -1,0 +1,8 @@
+{
+  "name": "cross-build-examples",
+  "version": "0.0.0",
+  "workspaces": [
+    "01-pure-rust"
+  ],
+  "packageManager": "yarn@3.3.0"
+}

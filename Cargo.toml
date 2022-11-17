@@ -1,0 +1,5 @@
+[workspace]
+members = ["01-pure-rust"]
+
+[profile.release]
+lto = true
