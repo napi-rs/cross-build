@@ -50,7 +50,7 @@ jobs:
           version: 0.10.0
       - run: cargo install cargo-xwin
       - run: yarn install
-      - run: yarn workspace @napi-cross-build/01-pure-rust build --zig --target ${{ matrix.targets }}
+      - run: yarn workspace @napi-cross-build/01-pure-rust build --target ${{ matrix.targets }}
       - uses: actions/upload-artifact@v3
         with:
           name: bindings-${{ matrix.targets }}
