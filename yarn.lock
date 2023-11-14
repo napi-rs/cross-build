@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 6
   cacheKey: 10
 
 "@isaacs/cliui@npm:^8.0.2":
@@ -23,9 +23,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@napi-cross-build/01-pure-rust@workspace:01-pure-rust"
   dependencies:
-    "@napi-rs/cli": "npm:2.16.5"
-    ava: "npm:^5.3.1"
-    lz-string: "npm:^1.5.0"
+    "@napi-rs/cli": 2.16.5
+    ava: ^5.3.1
+    lz-string: ^1.5.0
   languageName: unknown
   linkType: soft
 
@@ -817,9 +817,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>":
+"fsevents@patch:fsevents@npm%3A~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
   dependencies:
     node-gyp: "npm:latest"
   conditions: os=darwin
