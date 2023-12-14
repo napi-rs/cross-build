@@ -88,7 +88,7 @@ jobs:
           cache: yarn
           architecture: x86
       - name: Download bindings
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: bindings-${{ matrix.settings.target }}
           path: 01-pure-rust/
@@ -126,7 +126,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Download bindings
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: bindings-${{ matrix.settings.target }}
           path: 01-pure-rust/
