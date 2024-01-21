@@ -23,18 +23,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@napi-cross-build/01-pure-rust@workspace:01-pure-rust"
   dependencies:
-    "@napi-rs/cli": "npm:2.16.5"
+    "@napi-rs/cli": "npm:2.18.0"
     ava: "npm:^5.3.1"
     lz-string: "npm:^1.5.0"
   languageName: unknown
   linkType: soft
 
-"@napi-rs/cli@npm:2.16.5":
-  version: 2.16.5
-  resolution: "@napi-rs/cli@npm:2.16.5"
+"@napi-rs/cli@npm:2.18.0":
+  version: 2.18.0
+  resolution: "@napi-rs/cli@npm:2.18.0"
   bin:
     napi: scripts/index.js
-  checksum: 37c16d900887970d080e5a3dd5656463d27e5d4c78f3c50d8382af0b4c51752c705e4713c18b46a83ff54a3c58d5d146aabc82ac7b7bbda8134adb7325bb9fa1
+  checksum: dac8b6108fe63d8c6888e1ac4f2497bedbc0a663204e3eba6b03944f3b45256cb1184321153e653da43b8da4f7a3b048fd28ea093ff2216924e1af6c200b446b
   languageName: node
   linkType: hard
 
