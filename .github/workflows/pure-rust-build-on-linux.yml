@@ -39,12 +39,12 @@ jobs:
           targets: ${{ matrix.targets }}
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'yarn'
       - name: Install ziglang
         uses: goto-bus-stop/setup-zig@v1
         with:
-          version: 0.11.0
+          version: 0.13.0
       - run: cargo install cargo-xwin
       - run: yarn install
       - run: yarn workspace @napi-cross-build/01-pure-rust build --target ${{ matrix.targets }}
@@ -60,6 +60,8 @@ jobs:
         settings:
           - target: x86_64-apple-darwin
             host: macos-latest
+          - target: aarch64-apple-darwin
+            host: macos-latest
           - target: x86_64-pc-windows-msvc
             host: windows-latest
           - target: i686-pc-windows-msvc
@@ -71,9 +73,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
+        if: matrix.settings.target != 'aarch64-apple-darwin'
         with:
           node-version: ${{ matrix.node }}
           cache: 'yarn'
+          architecture: x64
+      - uses: actions/setup-node@v4
+        if: matrix.settings.target == 'aarch64-apple-darwin'
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'yarn'
+          architecture: arm64
       - name: Setup node x86
         if: matrix.settings.target == 'i686-pc-windows-msvc'
         run: yarn config set supportedArchitectures.cpu "ia32"
@@ -84,7 +94,7 @@ jobs:
         uses: actions/setup-node@v4
         if: matrix.settings.target == 'i686-pc-windows-msvc'
         with:
-          node-version: 18
+          node-version: 20
           cache: yarn
           architecture: x86
       - name: Download bindings
