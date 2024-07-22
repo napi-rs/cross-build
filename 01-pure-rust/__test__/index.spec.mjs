@@ -1,5 +1,4 @@
 import test from 'ava'
-import lz from 'lz-string'
 
 import { compressToBase64 } from '../index.js'
 
