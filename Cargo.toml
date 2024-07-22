@@ -1,5 +1,7 @@
 [workspace]
 members = ["01-pure-rust"]
+resolver = "2"
 
 [profile.release]
 lto = true
+strip = "symbols"
