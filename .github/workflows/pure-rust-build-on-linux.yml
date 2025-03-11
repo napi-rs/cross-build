@@ -48,7 +48,7 @@ jobs:
           targets: ${{ matrix.targets }}
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'yarn'
       - name: Install ziglang
         uses: goto-bus-stop/setup-zig@v1
