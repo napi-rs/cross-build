@@ -14,21 +14,27 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        targets:
-          [
-            'x86_64-apple-darwin',
-            'aarch64-apple-darwin',
-            'x86_64-pc-windows-msvc',
-            'i686-pc-windows-msvc',
-            'aarch64-pc-windows-msvc',
-            'x86_64-unknown-linux-gnu',
-            'aarch64-unknown-linux-gnu',
-            'x86_64-unknown-linux-musl',
-            'aarch64-unknown-linux-musl',
-            'armv7-unknown-linux-gnueabihf',
-            'aarch64-linux-android',
-            'armv7-linux-androideabi',
-          ]
+        settings:
+          - target: x86_64-apple-darwin
+            flags: '-x'
+          - target: aarch64-apple-darwin
+            flags: '-x'
+          - target: x86_64-pc-windows-msvc
+            flags: '-x'
+          - target: i686-pc-windows-msvc
+            flags: '-x'
+          - target: aarch64-pc-windows-msvc
+            flags: '-x'
+          - target: x86_64-unknown-linux-gnu
+            flags: '--use-napi-cross'
+          - target: aarch64-unknown-linux-gnu
+            flags: '--use-napi-cross'
+          - target: x86_64-unknown-linux-musl
+            flags: '-x'
+          - target: aarch64-unknown-linux-musl
+            flags: '-x'
+          - target: armv7-unknown-linux-gnueabihf
+            flags: '--use-napi-cross'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,20 +46,20 @@ jobs:
             ${{ github.workspace }}/.xwin
             ~/.napi-rs
             ./target
-          key: ${{ matrix.targets }}-cargo-cache
+          key: ${{ matrix.settings.target }}-cargo-cache
       - name: Install
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
-          targets: ${{ matrix.targets }}
+          targets: ${{ matrix.settings.target }}
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'yarn'
       - name: Install ziglang
         uses: goto-bus-stop/setup-zig@v1
         with:
-          version: 0.13.0
+          version: 0.14.1
       - name: Install cargo toolchains
         uses: taiki-e/install-action@v2
         env:
@@ -61,12 +67,12 @@ jobs:
         with:
           tool: cargo-zigbuild,cargo-xwin
       - run: yarn install
-      - run: yarn workspace @napi-cross-build/01-pure-rust build --target ${{ matrix.targets }}
+      - run: yarn workspace @napi-cross-build/01-pure-rust build --target ${{ matrix.settings.target }} ${{ matrix.settings.flags }}
         env:
           XWIN_CACHE_DIR: ${{ github.workspace }}/.xwin
       - uses: actions/upload-artifact@v4
         with:
-          name: bindings-${{ matrix.targets }}
+          name: bindings-${{ matrix.settings.target }}
           path: 01-pure-rust/*.node
           if-no-files-found: error
   test-host:
@@ -76,30 +82,30 @@ jobs:
         settings:
           - target: x86_64-apple-darwin
             host: macos-latest
+            architecture: x64
           - target: aarch64-apple-darwin
             host: macos-latest
+            architecture: arm64
           - target: x86_64-pc-windows-msvc
             host: windows-latest
+            architecture: x64
+          - target: aarch64-pc-windows-msvc
+            host: windows-11-arm
+            architecture: arm64
           - target: i686-pc-windows-msvc
             host: windows-latest
-        node: ['18', '20']
+            architecture: x64
+        node: ['20', '22']
     runs-on: ${{ matrix.settings.host }}
     needs:
       - build
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        if: matrix.settings.target != 'aarch64-apple-darwin'
         with:
           node-version: ${{ matrix.node }}
           cache: 'yarn'
-          architecture: x64
-      - uses: actions/setup-node@v4
-        if: matrix.settings.target == 'aarch64-apple-darwin'
-        with:
-          node-version: ${{ matrix.node }}
-          cache: 'yarn'
-          architecture: arm64
+          architecture: ${{ matrix.settings.architecture }}
       - name: Setup node x86
         if: matrix.settings.target == 'i686-pc-windows-msvc'
         run: yarn config set supportedArchitectures.cpu "ia32"
@@ -110,7 +116,7 @@ jobs:
         uses: actions/setup-node@v4
         if: matrix.settings.target == 'i686-pc-windows-msvc'
         with:
-          node-version: 20
+          node-version: 22
           cache: yarn
           architecture: x86
       - name: Download bindings
@@ -126,28 +132,28 @@ jobs:
       matrix:
         settings:
           - target: x86_64-unknown-linux-gnu
-            docker: node:18-slim
+            docker: node:22-slim
             args: ''
           - target: aarch64-unknown-linux-gnu
-            docker: node:18-slim
+            docker: node:22-slim
             args: '--platform linux/arm64'
           - target: x86_64-unknown-linux-musl
-            docker: node:18-alpine
+            docker: node:22-alpine
             args: ''
           - target: aarch64-unknown-linux-musl
-            docker: node:18-alpine
+            docker: node:22-alpine
             args: '--platform linux/arm64'
           - target: armv7-unknown-linux-gnueabihf
-            docker: node:18-bullseye-slim
+            docker: node:22-bullseye-slim
             args: '--platform linux/arm/v7'
-    runs-on: ubuntu-latest
+    runs-on: ${{ contains(matrix.settings.target, 'aarch64') && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
     needs:
       - build
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install
@@ -157,10 +163,12 @@ jobs:
           name: bindings-${{ matrix.settings.target }}
           path: 01-pure-rust/
       - name: Set up QEMU
+        if: ${{ !contains(matrix.settings.target, 'aarch64') }}
         uses: docker/setup-qemu-action@v3
         with:
           platforms: arm64,arm
       - run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+        if: ${{ !contains(matrix.settings.target, 'aarch64') }}
       - name: Run tests
         uses: addnab/docker-run-action@v3
         with:

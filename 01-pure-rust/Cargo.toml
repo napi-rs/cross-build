@@ -8,9 +8,9 @@ crate-type = ["cdylib"]
 
 [dependencies]
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
-napi = { version = "2", default-features = false, features = ["napi4"] }
-napi-derive = "2"
-lz-str = "0.2"
+napi = { workspace = true }
+napi-derive = { workspace = true }
+lz-str = { workspace = true }
 
 [build-dependencies]
-napi-build = "2"
+napi-build = { workspace = true }
