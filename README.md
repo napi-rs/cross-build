@@ -14,6 +14,8 @@ This project is a demo for those users who want to build multi-platform addons o
 * Linux x64 gnu (`glibc` 2.17)
 * Linux x64 musl
 * Linux arm64 gnu (`glibc` 2.17)
+* Linux s390x gnu (`glibc` 2.17)
+* Linux powerpc64le gnu (`glibc` 2.17)
 * Linux arm64 musl
 * Linux armv7 gnueabihf
 * Android arm64
