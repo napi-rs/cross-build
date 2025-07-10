@@ -35,6 +35,10 @@ jobs:
             flags: '-x'
           - target: armv7-unknown-linux-gnueabihf
             flags: '--use-napi-cross'
+          - target: powerpc64le-unknown-linux-gnu
+            flags: '--use-napi-cross'
+          - target: s390x-unknown-linux-gnu
+            flags: '--use-napi-cross'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -146,6 +150,12 @@ jobs:
           - target: armv7-unknown-linux-gnueabihf
             docker: node:22-bullseye-slim
             args: '--platform linux/arm/v7'
+          - target: s390x-unknown-linux-gnu
+            docker: node:22-slim
+            args: '--platform linux/s390x'
+          - target: powerpc64le-unknown-linux-gnu
+            docker: node:22-slim
+            args: '--platform linux/ppc64le'
     runs-on: ${{ contains(matrix.settings.target, 'aarch64') && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
     needs:
       - build
@@ -171,6 +181,8 @@ jobs:
         if: ${{ !contains(matrix.settings.target, 'aarch64') }}
       - name: Run tests
         uses: addnab/docker-run-action@v3
+        # Node.js on qemu randomly segfaults on powerpc64le
+        continue-on-error: ${{ matrix.settings.target == 'powerpc64le-unknown-linux-gnu' }}
         with:
           image: ${{ matrix.settings.docker }}
           options: ${{ matrix.settings.args }} -v ${{ github.workspace }}:/build -w /build
