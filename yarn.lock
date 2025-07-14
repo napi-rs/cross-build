@@ -308,8 +308,8 @@ __metadata:
   linkType: soft
 
 "@napi-rs/cli@npm:^3.0.0-alpha.92":
-  version: 3.0.0-alpha.93
-  resolution: "@napi-rs/cli@npm:3.0.0-alpha.93"
+  version: 3.0.0-alpha.99
+  resolution: "@napi-rs/cli@npm:3.0.0-alpha.99"
   dependencies:
     "@inquirer/prompts": "npm:^7.4.0"
     "@napi-rs/cross-toolchain": "npm:^0.0.19"
@@ -336,7 +336,7 @@ __metadata:
   bin:
     napi: ./dist/cli.js
     napi-raw: ./cli.mjs
-  checksum: 10/62f3e4e316849771cd28348d4257b1feecf97c7649caad3379592a44e8efdba71a13f0823ad5a4386f19825a8cca704585944335f132b07a13877200231740c7
+  checksum: 10/9ed1d1c376f454d6c85ef4cfff072b4267b4277f5f7eedf4e41c109ac61584702783e46061debce7a9de78ee6dcf87d1bd447f56de08a048a0b142399c1213b3
   languageName: node
   linkType: hard
 
@@ -910,8 +910,8 @@ __metadata:
   linkType: hard
 
 "@octokit/core@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "@octokit/core@npm:7.0.2"
+  version: 7.0.3
+  resolution: "@octokit/core@npm:7.0.3"
   dependencies:
     "@octokit/auth-token": "npm:^6.0.0"
     "@octokit/graphql": "npm:^9.0.1"
@@ -920,7 +920,7 @@ __metadata:
     "@octokit/types": "npm:^14.0.0"
     before-after-hook: "npm:^4.0.0"
     universal-user-agent: "npm:^7.0.0"
-  checksum: 10/bef39511f3653b9dec239a7e8e8bdb4f17eb43f95d4f69b14eda44a4e2d22ab0239e2a4b0a445f474afd85169928b60420d0be5b316165505851b8a69b3ab596
+  checksum: 10/14e7b0e9f293d9d9330e105f7acd99add5ce54001577bbeafc1533de53035a89fc755485e6e6867e9e8af8dbd6a737dfa875374abadadd40b8533235d01ecee1
   languageName: node
   linkType: hard
 
@@ -1119,7 +1119,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.11.0, acorn@npm:^8.14.1, acorn@npm:^8.6.0":
+"acorn@npm:^8.11.0, acorn@npm:^8.15.0, acorn@npm:^8.6.0":
   version: 8.15.0
   resolution: "acorn@npm:8.15.0"
   bin:
@@ -1219,20 +1219,20 @@ __metadata:
   linkType: hard
 
 "ava@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "ava@npm:6.4.0"
+  version: 6.4.1
+  resolution: "ava@npm:6.4.1"
   dependencies:
     "@vercel/nft": "npm:^0.29.4"
-    acorn: "npm:^8.14.1"
+    acorn: "npm:^8.15.0"
     acorn-walk: "npm:^8.3.4"
     ansi-styles: "npm:^6.2.1"
     arrgv: "npm:^1.0.2"
     arrify: "npm:^3.0.0"
     callsites: "npm:^4.2.0"
-    cbor: "npm:^10.0.3"
+    cbor: "npm:^10.0.9"
     chalk: "npm:^5.4.1"
     chunkd: "npm:^2.0.1"
-    ci-info: "npm:^4.2.0"
+    ci-info: "npm:^4.3.0"
     ci-parallel-vars: "npm:^1.0.1"
     cli-truncate: "npm:^4.0.0"
     code-excerpt: "npm:^4.0.0"
@@ -1240,7 +1240,7 @@ __metadata:
     concordance: "npm:^5.0.4"
     currently-unhandled: "npm:^0.4.1"
     debug: "npm:^4.4.1"
-    emittery: "npm:^1.1.0"
+    emittery: "npm:^1.2.0"
     figures: "npm:^6.1.0"
     globby: "npm:^14.1.0"
     ignore-by-default: "npm:^2.1.0"
@@ -1269,7 +1269,7 @@ __metadata:
       optional: true
   bin:
     ava: entrypoints/cli.mjs
-  checksum: 10/f250e4bbd530e63983544395eaeadb556f0aaa2d53116b2ef3daae7b7962614d3fa9165fce9d55ea92b9f8296316b5511f596c507db00978d1b8d7d6a5b6fc91
+  checksum: 10/af177d369e34178de6eec1e0139927149c36fac59950a4d29b3bd7113af4d5cf4cfd492f98db76321822ce9fe14c367a5b477d2a6616a12d1e8a4844e8b4ddea
   languageName: node
   linkType: hard
 
@@ -1328,7 +1328,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cbor@npm:^10.0.3":
+"cbor@npm:^10.0.9":
   version: 10.0.9
   resolution: "cbor@npm:10.0.9"
   dependencies:
@@ -1365,7 +1365,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^4.2.0":
+"ci-info@npm:^4.3.0":
   version: 4.3.0
   resolution: "ci-info@npm:4.3.0"
   checksum: 10/01e359032a34782fa2503530dd350c3ffaecede7d9ea0b120efa2ddda4c8dc80d8c2566caf1ea2287c739fad2bf277c65f70063a21f31f66203b889039c70eea
@@ -1548,7 +1548,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emittery@npm:^1.1.0":
+"emittery@npm:^1.2.0":
   version: 1.2.0
   resolution: "emittery@npm:1.2.0"
   checksum: 10/b31ba7efaa38d1792c7cf619e79e57752ef788d2620483214e5b1c03163b5146045c7a7cc98ca371edf6f05668c0177f3927e88c71ce52530b105bd038a09048
