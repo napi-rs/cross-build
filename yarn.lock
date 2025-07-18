@@ -302,14 +302,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@napi-cross-build/01-pure-rust@workspace:01-pure-rust"
   dependencies:
-    "@napi-rs/cli": "npm:^3.0.0-alpha.92"
+    "@napi-rs/cli": "npm:^3.0.0"
     ava: "npm:^6.4.0"
   languageName: unknown
   linkType: soft
 
-"@napi-rs/cli@npm:^3.0.0-alpha.92":
-  version: 3.0.0-alpha.99
-  resolution: "@napi-rs/cli@npm:3.0.0-alpha.99"
+"@napi-rs/cli@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@napi-rs/cli@npm:3.0.0"
   dependencies:
     "@inquirer/prompts": "npm:^7.4.0"
     "@napi-rs/cross-toolchain": "npm:^0.0.19"
@@ -336,7 +336,7 @@ __metadata:
   bin:
     napi: ./dist/cli.js
     napi-raw: ./cli.mjs
-  checksum: 10/9ed1d1c376f454d6c85ef4cfff072b4267b4277f5f7eedf4e41c109ac61584702783e46061debce7a9de78ee6dcf87d1bd447f56de08a048a0b142399c1213b3
+  checksum: 10/d41944bab77f3b56173e45728206cd2654f438cc0fa290d0a88ec58a5b20dbd49bd5b12de949084e42dcb7b6ae90817510bfcfa89368b39e3129dbc8155ff0d1
   languageName: node
   linkType: hard
 
@@ -2229,9 +2229,9 @@ __metadata:
   linkType: hard
 
 "picomatch@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "picomatch@npm:4.0.2"
-  checksum: 10/ce617b8da36797d09c0baacb96ca8a44460452c89362d7cb8f70ca46b4158ba8bc3606912de7c818eb4a939f7f9015cef3c766ec8a0c6bfc725fdc078e39c717
+  version: 4.0.3
+  resolution: "picomatch@npm:4.0.3"
+  checksum: 10/57b99055f40b16798f2802916d9c17e9744e620a0db136554af01d19598b96e45e2f00014c91d1b8b13874b80caa8c295b3d589a3f72373ec4aaf54baa5962d5
   languageName: node
   linkType: hard
 
