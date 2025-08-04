@@ -173,8 +173,8 @@ __metadata:
   linkType: hard
 
 "@inquirer/prompts@npm:^7.4.0":
-  version: 7.7.1
-  resolution: "@inquirer/prompts@npm:7.7.1"
+  version: 7.8.0
+  resolution: "@inquirer/prompts@npm:7.8.0"
   dependencies:
     "@inquirer/checkbox": "npm:^4.2.0"
     "@inquirer/confirm": "npm:^5.1.14"
@@ -184,14 +184,14 @@ __metadata:
     "@inquirer/number": "npm:^3.0.17"
     "@inquirer/password": "npm:^4.0.17"
     "@inquirer/rawlist": "npm:^4.1.5"
-    "@inquirer/search": "npm:^3.0.17"
+    "@inquirer/search": "npm:^3.1.0"
     "@inquirer/select": "npm:^4.3.1"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10/7f801e075e06cb121f0b0130c1c139f15590552573ecc1f8401ca966cba96365e9abf154ab117be184bfdfcddda7b1fc54d006512ff4a4ac934f7772f9706845
+  checksum: 10/1b8d6de760aab3804cd63f23295a427117035f935e4f43852da306ef5860f7a5eb9284c1562a65b562d4d0fcf6601c5424d54f7526f4ab3ae4707bd68b426922
   languageName: node
   linkType: hard
 
@@ -211,9 +211,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inquirer/search@npm:^3.0.17":
-  version: 3.0.17
-  resolution: "@inquirer/search@npm:3.0.17"
+"@inquirer/search@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@inquirer/search@npm:3.1.0"
   dependencies:
     "@inquirer/core": "npm:^10.1.15"
     "@inquirer/figures": "npm:^1.0.13"
@@ -224,7 +224,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10/bc35af0babd8febc7e214b13a6eb384857470f0c7824c2601f19c28420365060a0627ef4037a58370276ba19696b754e014be9d2a75b9c34b5351b59db90ed2b
+  checksum: 10/b84827c0925f4a2a0461012fe75d82d93da291bb7493701a191a0b541fca3aad508f92edeef1ba63faf9cf0007233b08f1985ab08833348d95a9a212263ac6cc
   languageName: node
   linkType: hard
 
@@ -1328,18 +1328,18 @@ __metadata:
   linkType: hard
 
 "cbor@npm:^10.0.9":
-  version: 10.0.9
-  resolution: "cbor@npm:10.0.9"
+  version: 10.0.10
+  resolution: "cbor@npm:10.0.10"
   dependencies:
     nofilter: "npm:^3.0.2"
-  checksum: 10/d320dc36ca392ecedeaff7e279026dc1bcbc6ae0bf28b9bbdf8fb69d7f9a9bb0e6198ef9a24c98466e911dec95ff3f36c52c885d687afc48f5d2ecce3c8c3d9d
+  checksum: 10/ec15770a37bb5f19f0ff6dfde1342c48035c11ff64c1083d3d22a2a3d3e0018f33c94a510d7db44fe2eb4022b3a90a2bd78da7249bd9c33e6e696a0095c93118
   languageName: node
   linkType: hard
 
 "chalk@npm:^5.4.1":
-  version: 5.4.1
-  resolution: "chalk@npm:5.4.1"
-  checksum: 10/29df3ffcdf25656fed6e95962e2ef86d14dfe03cd50e7074b06bad9ffbbf6089adbb40f75c00744d843685c8d008adaf3aed31476780312553caf07fa86e5bc7
+  version: 5.5.0
+  resolution: "chalk@npm:5.5.0"
+  checksum: 10/19f6905b47b628541976a534e2f39c3779f7f9276ff9693cb8f7cdb3e3e09ee5dee16e0c3768632fbb41c2a1f1653ee0041ea7730428b804068945eb0bab09c4
   languageName: node
   linkType: hard
 
