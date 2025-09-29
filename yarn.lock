@@ -1575,9 +1575,9 @@ __metadata:
   linkType: hard
 
 "detect-libc@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "detect-libc@npm:2.1.0"
-  checksum: 10/698e0c1a3721742bbda88cda62d925e4bfe5827a761403d2246e5eb2535660601ea04e79fbdfbb9f290d851bbf227239ca514f8149b89cd320f1660fae1b9042
+  version: 2.1.1
+  resolution: "detect-libc@npm:2.1.1"
+  checksum: 10/23244632be44caa726f68f0b257f58d1fd86a60918674737bca9acf40d6509a919c60252998256c81e73d4a8350f0a53eef8a4eef538f80e3906986fb61a64eb
   languageName: node
   linkType: hard
 
@@ -2462,15 +2462,15 @@ __metadata:
   linkType: hard
 
 "tar@npm:^7.4.0":
-  version: 7.4.4
-  resolution: "tar@npm:7.4.4"
+  version: 7.5.1
+  resolution: "tar@npm:7.5.1"
   dependencies:
     "@isaacs/fs-minipass": "npm:^4.0.0"
     chownr: "npm:^3.0.0"
     minipass: "npm:^7.1.2"
     minizlib: "npm:^3.1.0"
     yallist: "npm:^5.0.0"
-  checksum: 10/be7d95e019b029ac507e7cd4b23c243ba896b67d0837c4f53d18c32a5014a24b7b247e982f4d47147b8d637c491b35cc122e19e29246137ecb2b88a495aaf1fb
+  checksum: 10/4848cd2fa2fcaf0734cf54e14bc685056eb43a74d7cc7f954c3ac88fea88c85d95b1d7896619f91aab6f2234c5eec731c18aaa201a78fcf86985bdc824ed7a00
   languageName: node
   linkType: hard
 
