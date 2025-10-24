@@ -74,7 +74,7 @@ jobs:
       - run: yarn workspace @napi-cross-build/01-pure-rust build --target ${{ matrix.settings.target }} ${{ matrix.settings.flags }}
         env:
           XWIN_CACHE_DIR: ${{ github.workspace }}/.xwin
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: bindings-${{ matrix.settings.target }}
           path: 01-pure-rust/*.node
@@ -124,7 +124,7 @@ jobs:
           cache: yarn
           architecture: x86
       - name: Download bindings
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: bindings-${{ matrix.settings.target }}
           path: 01-pure-rust/
@@ -168,7 +168,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Download bindings
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: bindings-${{ matrix.settings.target }}
           path: 01-pure-rust/
