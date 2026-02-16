@@ -187,6 +187,4 @@ jobs:
           image: ${{ matrix.settings.docker }}
           name: test-${{ matrix.settings.target }}
           options: ${{ matrix.settings.args }} -v ${{ github.workspace }}:/build -w /build
-          args: |
-            set -e
-            yarn workspace @napi-cross-build/01-pure-rust test
+          args: sh -c "set -e && yarn workspace @napi-cross-build/01-pure-rust test"
