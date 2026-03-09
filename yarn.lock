@@ -1306,11 +1306,11 @@ __metadata:
   linkType: hard
 
 "cbor@npm:^10.0.11":
-  version: 10.0.11
-  resolution: "cbor@npm:10.0.11"
+  version: 10.0.12
+  resolution: "cbor@npm:10.0.12"
   dependencies:
     nofilter: "npm:^3.0.2"
-  checksum: 10/34e72ac53b883fa7bb91e2ec806cc25bacada1c830bb9d44eafa45528ff0c55b25eeced5403ceb9cd24927745f376aaa1a1c6de2f36240bb4d4ae0e91179824e
+  checksum: 10/296b6564c60e856aa13500ddeaf95aa979b05a80b543e85f6a2992d335e049ce2fd750a724a5d99095a9fee1c2bfcb934437683f2c19d8db4e129ea57813fb22
   languageName: node
   linkType: hard
 
@@ -1518,14 +1518,14 @@ __metadata:
   linkType: hard
 
 "es-toolkit@npm:^1.41.0":
-  version: 1.44.0
-  resolution: "es-toolkit@npm:1.44.0"
+  version: 1.45.1
+  resolution: "es-toolkit@npm:1.45.1"
   dependenciesMeta:
     "@trivago/prettier-plugin-sort-imports@4.3.0":
       unplugged: true
     prettier-plugin-sort-re-exports@0.0.1:
       unplugged: true
-  checksum: 10/72a74c8688dec99743b3170e1e78822b983519b795643c2f04c4a8e6b49e2d6f554013e2266850de7929718b4113768912e9b8394eb6e3d6c9e28a38fb8f5317
+  checksum: 10/e092803bd0ba473db04798311e39bfc1e27e7bb958309f2e49c1be59931c7d88d5d84fc12483b32e0e73c2dec42739b73b4dfe6322a37c2a158b552456b24134
   languageName: node
   linkType: hard
 
@@ -2240,15 +2240,15 @@ __metadata:
   linkType: hard
 
 "tar@npm:^7.4.0":
-  version: 7.5.9
-  resolution: "tar@npm:7.5.9"
+  version: 7.5.10
+  resolution: "tar@npm:7.5.10"
   dependencies:
     "@isaacs/fs-minipass": "npm:^4.0.0"
     chownr: "npm:^3.0.0"
     minipass: "npm:^7.1.2"
     minizlib: "npm:^3.1.0"
     yallist: "npm:^5.0.0"
-  checksum: 10/1213cdde9c22d6acf8809ba5d2a025212ce3517bc99c4a4c6981b7dc0489bf3b164db9c826c9517680889194c9ba57448c8ff0da35eca9a60bb7689bf0b3897d
+  checksum: 10/98ba6421a250b233c36a54f7441647bdfee1ed0b916cd57850259a3602154d996f5b8422f67ef5c8ce77f582ed938054775c2873fc7c901e0c7530ed50febc40
   languageName: node
   linkType: hard
 
