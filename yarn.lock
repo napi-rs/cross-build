@@ -1253,7 +1253,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"brace-expansion@npm:^5.0.2":
+"brace-expansion@npm:^5.0.5":
   version: 5.0.5
   resolution: "brace-expansion@npm:5.0.5"
   dependencies:
@@ -1472,14 +1472,14 @@ __metadata:
   linkType: hard
 
 "emnapi@npm:^1.9.1":
-  version: 1.9.1
-  resolution: "emnapi@npm:1.9.1"
+  version: 1.9.2
+  resolution: "emnapi@npm:1.9.2"
   peerDependencies:
     node-addon-api: ">= 6.1.0"
   peerDependenciesMeta:
     node-addon-api:
       optional: true
-  checksum: 10/65a5521bae9b2a981a5a41ddff219abbf391fd46da1cae5662a84e1c3a092ee94fdb07395f221f40eed4ff4f3b55f8408587a763377e658416364da91cf43249
+  checksum: 10/304f2e7cfe4c1f8ccd7f2b4ccef427774cec469c1bd7c48595ae9cf5ca3a66a40fdc2d5e68db105ff98ba08180b1ed67cb9f9d099ef8dae8d2543c074adc4222
   languageName: node
   linkType: hard
 
@@ -1847,16 +1847,16 @@ __metadata:
   linkType: hard
 
 "lodash@npm:^4.17.15":
-  version: 4.17.23
-  resolution: "lodash@npm:4.17.23"
-  checksum: 10/82504c88250f58da7a5a4289f57a4f759c44946c005dd232821c7688b5fcfbf4a6268f6a6cdde4b792c91edd2f3b5398c1d2a0998274432cff76def48735e233
+  version: 4.18.1
+  resolution: "lodash@npm:4.18.1"
+  checksum: 10/306fea53dfd39dad1f03d45ba654a2405aebd35797b673077f401edb7df2543623dc44b9effbb98f69b32152295fff725a4cec99c684098947430600c6af0c3f
   languageName: node
   linkType: hard
 
 "lru-cache@npm:^11.0.0":
-  version: 11.2.7
-  resolution: "lru-cache@npm:11.2.7"
-  checksum: 10/fbff4b8dee8189dde9b52cdfb3ea89b4c9cec094c1538cd30d1f47299477ff312efdb35f7994477ec72328f8e754e232b26a143feda1bd1f79ff22da6664d2c5
+  version: 11.3.0
+  resolution: "lru-cache@npm:11.3.0"
+  checksum: 10/e94d4d1159299f745e9f9e75927e460aede732daa339141a887695e6d75c8d1a393bd0e79b02769bd9344e76eec0c02685e6c0f5c741cfa559488d86fec645dd
   languageName: node
   linkType: hard
 
@@ -1912,11 +1912,11 @@ __metadata:
   linkType: hard
 
 "minimatch@npm:^10.2.2":
-  version: 10.2.4
-  resolution: "minimatch@npm:10.2.4"
+  version: 10.2.5
+  resolution: "minimatch@npm:10.2.5"
   dependencies:
-    brace-expansion: "npm:^5.0.2"
-  checksum: 10/aea4874e521c55bb60744685bbffe3d152e5460f84efac3ea936e6bbe2ceba7deb93345fec3f9bb17f7b6946776073a64d40ae32bf5f298ad690308121068a1f
+    brace-expansion: "npm:^5.0.5"
+  checksum: 10/19e87a931aff60ee7b9d80f39f817b8bfc54f61f8356ee3549fbf636dbccacacfec8d803eac73293955c4527cd085247dfc064bce4a5e349f8f3b85e2bf5da0f
   languageName: node
   linkType: hard
 
