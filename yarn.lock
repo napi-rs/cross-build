@@ -1491,14 +1491,14 @@ __metadata:
   linkType: hard
 
 "es-toolkit@npm:^1.41.0":
-  version: 1.45.1
-  resolution: "es-toolkit@npm:1.45.1"
+  version: 1.46.0
+  resolution: "es-toolkit@npm:1.46.0"
   dependenciesMeta:
     "@trivago/prettier-plugin-sort-imports@4.3.0":
       unplugged: true
     prettier-plugin-sort-re-exports@0.0.1:
       unplugged: true
-  checksum: 10/e092803bd0ba473db04798311e39bfc1e27e7bb958309f2e49c1be59931c7d88d5d84fc12483b32e0e73c2dec42739b73b4dfe6322a37c2a158b552456b24134
+  checksum: 10/4ff32fdc3e6639b7c1721d462c309065e5b1a96e07c03bf894942b385c012060a10a76f5caf3627f9d65f430c2da8ec440597bfc16d3f83c4aabf76770e9e1e2
   languageName: node
   linkType: hard
 
