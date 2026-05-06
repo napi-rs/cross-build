@@ -23,13 +23,13 @@
   "license": "MIT",
   "devDependencies": {
     "@napi-rs/cli": "^3.0.0",
-    "ava": "^7.0.0"
+    "ava": "^8.0.0"
   },
   "ava": {
     "timeout": "3m"
   },
   "engines": {
-    "node": ">= 10"
+    "node": "^22.20 || ^24.12 || >=25"
   },
   "scripts": {
     "artifacts": "napi artifacts",

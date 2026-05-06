@@ -99,7 +99,7 @@ jobs:
           - target: i686-pc-windows-msvc
             host: windows-latest
             architecture: x64
-        node: ['20', '22']
+        node: ['22']
     runs-on: ${{ matrix.settings.host }}
     needs:
       - build
