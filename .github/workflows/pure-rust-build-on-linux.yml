@@ -40,6 +40,9 @@ jobs:
           - target: s390x-unknown-linux-gnu
             flags: '--use-napi-cross'
     runs-on: ubuntu-latest
+    env:
+      # Apple Silicon requires macOS 11.0; preserve the Intel deployment target.
+      MACOSX_DEPLOYMENT_TARGET: ${{ matrix.settings.target == 'aarch64-apple-darwin' && '11.0' || '10.13' }}
     steps:
       - uses: actions/checkout@v7
       - name: Cache cargo registry
@@ -69,7 +72,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          tool: cargo-zigbuild,cargo-xwin
+          tool: cargo-zigbuild@0.24.0,cargo-xwin
       - run: yarn install
       - run: yarn workspace @napi-cross-build/01-pure-rust build --target ${{ matrix.settings.target }} ${{ matrix.settings.flags }}
         env:
